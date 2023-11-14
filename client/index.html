@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" />
     <title>Movie Hub</title>
 </head>
 
@@ -18,16 +19,17 @@
 
     <!-- Content -->
     <div class="content container mx-auto mt-4">
-        <p>All Movies</p>
-        <div id="moviesSection">
-
-        </div>
+        <p class="text-3xl font-bold mb-4 text-center">All Movies</p>
+        <div id="moviesSection" class="flex flex-wrap justify-center"></div>
+        <div class="text-center">
+            <button id="loadMoreBtn" class="bg-blue-500 text-white py-3 px-6 rounded-full mt-4 mx-auto hover:bg-blue-700 transition duration-300 text-lg">Load More</button>
+        </div> 
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white p-4 mt-8">
-        <div class="container mx-auto">
-        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Your Website Name. All rights reserved.</p>
         </div>
     </footer>
 </body>

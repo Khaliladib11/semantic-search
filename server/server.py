@@ -49,7 +49,7 @@ def get_movie(id: int):
     }
 
 @app.get("/api/v1/movies")
-def get_movies(start: int=0, limit: int= 10):
+def get_movies(start: int=0, limit: int= 6):
     if start >= limit:
         return {
             "status": "ERROR",
