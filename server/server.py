@@ -23,6 +23,22 @@ def welcome():
         "message": "Hello World"
     }
 
+@app.get("/api/v1/movie")
+def get_movie(id: int):
+    print(type(id))
+    for movie in data:
+        print(movie['id'])
+        if movie['id'] == id:
+            return {
+                "status": "SUCCESS",
+                "data": movie
+            }
+        
+    return {
+        "status": "SUCCESS",
+        "message": f"No movie with ID {id}"
+    }
+
 @app.get("/api/v1/movies")
 def get_movies(start: int=0, limit: int= 10):
     if start >= limit:
